@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,7 +18,7 @@ public class Health : MonoBehaviour
             damageDealer.Hit();
         }
     }
-
+    
     private void TakeDamage(int damage)
     {
         if (damage >= health)

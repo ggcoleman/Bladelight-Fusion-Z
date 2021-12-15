@@ -16,6 +16,7 @@ public class PathFinder : MonoBehaviour
     {
         enemySpawner = FindObjectOfType<EnemySpawner>();
     }
+    
     void Start()
     {
         waveConfig = enemySpawner.GetCurrentWave();
@@ -30,8 +31,7 @@ public class PathFinder : MonoBehaviour
     }
 
     private void FollowPath()
-    {
-        Debug.Log(waypoints.Count);
+    { 
         if (waypointIndex < waypoints.Count)
         {
 
