@@ -55,8 +55,7 @@ public class CameraShake : MonoBehaviour
 
     private float CalculateShake(float damage)
     {
-        var magnitude = shakeMagnitude + (1 / damage);
-        UnityEngine.Debug.Log(magnitude.ToString());
+        var magnitude = shakeMagnitude + (1 / damage);        
         return magnitude;
     }
 }
