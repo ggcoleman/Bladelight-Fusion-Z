@@ -23,18 +23,20 @@ public class Health : MonoBehaviour
 
         if (damageDealer != null)
         {
-            TakeDamage(damageDealer.GetDamage());
+
+            var damage = damageDealer.GetDamage();
+            TakeDamage(damage);
             PlayHitEffect();
-            ShakeCamera();
+            ShakeCamera(damage);
             damageDealer.Hit();
         }
     }
 
-    private void ShakeCamera()
+    private void ShakeCamera(float damage)
     {
         if (cameraShake != null && applyCameraShake)
         {
-            cameraShake.Play();
+            cameraShake.Play(damage);
         }
     }
 
