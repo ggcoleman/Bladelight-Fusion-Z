@@ -1,5 +1,5 @@
 using System;
-using System.Collections; 
+using System.Collections;
 using UnityEngine;
 
 public class Shooter : MonoBehaviour
@@ -11,7 +11,7 @@ public class Shooter : MonoBehaviour
     [SerializeField] float projectileLifetime = 5f;
     [SerializeField] float baseFiringRate = 0.2f;
 
-  
+
     [Header("AI")]
     [SerializeField] float minimumFiringRate = 0.1f;
     [SerializeField] float firingRateVariance = 0f;
@@ -19,6 +19,13 @@ public class Shooter : MonoBehaviour
 
     [HideInInspector] public bool isFiring = false;
     Coroutine fireCoroutine;
+    AudioPlayer audioPlayer;
+
+    void Awake()
+    {
+        audioPlayer = FindObjectOfType<AudioPlayer>();
+    }
+
     void Start()
     {
         if (useAI)
@@ -61,6 +68,8 @@ public class Shooter : MonoBehaviour
             }
 
             Destroy(instance, projectileLifetime);
+
+            audioPlayer.PlayShootingClip();
 
             yield return new WaitForSeconds(GetRandomProjectileSpawnTime());
         }
