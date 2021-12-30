@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5663390479099968821}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,7 +187,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcdba65e0eba0c84a926fb32783fc1a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 1
   health: 50
+  score: 10
   hitEffect: {fileID: 7278776258440453174, guid: b641d849afae88c40b79fde10a9438df, type: 3}
   applyCameraShake: 1
 --- !u!114 &5663390479099968821
