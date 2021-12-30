@@ -17,7 +17,7 @@ public class WaveConfigSO : ScriptableObject
     public float GetMoveSpeed()
     {
         return moveSpeed;
-    }
+    }    
 
     public int GetEnemyCount()
     {

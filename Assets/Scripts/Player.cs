@@ -20,10 +20,15 @@ public class Player : MonoBehaviour
     [SerializeField] float paddingBottom = 0f;
 
     Shooter shooter;
+
+    ScoreKeeper scoreKeeper;
+
     void Awake()
     {
         InitBounds();
         shooter = GetComponent<Shooter>();
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
+        scoreKeeper.ResetScore();
     }
 
     void Update()

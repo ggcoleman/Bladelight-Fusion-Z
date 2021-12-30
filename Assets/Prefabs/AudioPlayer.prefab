@@ -47,6 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootingClip: {fileID: 8300000, guid: ab83615008d948842b5e06caaf375137, type: 3}
   shootingVolume: 0.43
+  playerDeathClip: {fileID: 8300000, guid: e5ba368f8629f4d4f951bb3477800c35, type: 3}
+  playerDeathVolume: 0.4
   damageClip: {fileID: 8300000, guid: becbd602996f153429bfaa46d3ff0f5b, type: 3}
   damageVolume: 0.72
   destroyClip: {fileID: 8300000, guid: ed3e6ae627f5e524f9a939afcb0a62dd, type: 3}

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,10 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] AudioClip shootingClip;
     [SerializeField] [Range(0f, 1f)] float shootingVolume = 1f;
 
+
+    [Header("Player")]
+    [SerializeField] AudioClip playerDeathClip;
+    [SerializeField] [Range(0f, 1f)] float playerDeathVolume = 1f;
 
     [Header("Damage")]
     [SerializeField] AudioClip damageClip;
@@ -36,7 +41,13 @@ public class AudioPlayer : MonoBehaviour
         {
             var point = Camera.main.transform.position;
 
+
             AudioSource.PlayClipAtPoint(clip, point, volume);
         }
+    }
+
+    public void PlayPlayerDeathClip()
+    {
+        PlayClip(playerDeathClip, playerDeathVolume);
     }
 }
